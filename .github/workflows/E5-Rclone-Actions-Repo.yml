@@ -1,13 +1,10 @@
 name: E5-Rclone-Actions-Repo
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
   schedule:
-    - cron: 0 22 * * *
-  watch:
-    types: started
+    - cron: 0 22 1/2 * *
+
 jobs:
   run-it:
     runs-on: ubuntu-latest
